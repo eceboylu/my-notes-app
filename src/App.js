@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import ThemeToggle from "./components/ThemeToggle";
+import Home from "./pages/Home";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="min-h-screen bg-[#f4f4f4] dark:bg-gray-900 transition-colors">
+
+      <header className="flex justify-between items-center px-10 py-5 bg-white dark:bg-gray-800 shadow-sm border-b transition-colors">
+        <div className="flex items-center gap-3">
+          <h1 className="text-2xl font-extrabold" style={{ color: "#FF69B4" }}>
+            Papyrus Notes
+          </h1>
+          <i className="fa-solid fa-pencil text-gray-400 ml-2"></i>
+        </div>
+
+        <ThemeToggle />
       </header>
+
+      <Home />
+
     </div>
   );
 }
-
-export default App;
